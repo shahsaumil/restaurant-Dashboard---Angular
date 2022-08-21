@@ -1,0 +1,113 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Shah Managemnet</a>
+  <div class="d-flex">
+    <button class="btn btn-success" type="button" data-toggle="modal" (click)="openModal()">
+      <!-- Button trigger modal -->
+      Add Restaurant
+    </button>
+  </div>
+</nav>
+<!-- Jumboton -->
+<div class="jumbotron mt-5 mb-5">
+  <h1 class="display-4">Shah Development Service</h1>
+  <p class="lead">You can order customized design</p>
+  <!-- <hr class="my-4"> -->
+  <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" target="_blank" href="#" role="button">Visit us</a>
+  </p>
+</div>
+<!-- table -->
+<table class="table mt-4">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Address</th>
+      <th scope="col">Action</th>
+      <th scope="col">Services</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of allresdata">
+      <th scope="row">{{d.id}}</th>
+      <td>{{d.name}}</td>
+      <td>{{d.email}}</td>
+      <td>{{d.mobile}}</td>
+      <td>{{d.address}}</td>
+      <td>{{d.services}}</td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="editbtn(d)">Edit</button>&nbsp;
+        <button type="button" (click)="deleteres(d)" class="btn btn-danger">Delete</button>
+        
+
+
+      </td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+
+<!-- Modal -->
+<!-- Ref : https://www.youtube.com/watch?v=_rMWS4Neckg&ab_channel=NaveenBommidiTechSeeker -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- form  -->
+        <form [formGroup]="formValue">
+          <div class="form-row">
+            <div class="form-group col-md-10 mb-3">
+              <label for="inputEmail4">Name</label>
+              <input type="text" formControlName="name" class="form-control" id="inputEmail4" placeholder="Name">
+            </div>
+            <div class="form-group col-md-10 mb-3">
+              <label for="inputPassword4">Mobile</label>
+              <input type="text" formControlName="mobile" class="form-control" id="inputPassword4" placeholder="Mobile">
+            </div>
+          </div>
+          <div class="form-group  mb-3">
+            <label for="inputAddress">Address</label>
+            <input type="text" formControlName="address" class="form-control" id="inputAddress"
+              placeholder="1234 Main St">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-10 mb-3">
+              <label for="inputCity">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="Email"
+                placeholder="example@GMAIL.COM">
+            </div>
+
+            <div class="form-group  col-md-10 mb-3">
+              <label for="inputZip">Services</label>
+              <input type="text" formControlName="services" class="form-control" id="inputZip" placeholder="Service">
+            </div>
+          </div>
+
+
+        </form>
+        <!-- form  -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="addRes()">Add Details</button>
+        <button type="button" (click)="updatebtn()" class="btn btn-lg">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

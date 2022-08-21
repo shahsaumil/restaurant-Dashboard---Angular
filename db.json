@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "name": "Dummy",
+      "email": "dummy@gmail.com",
+      "mobile": "6465432132486",
+      "address": "Dummy, bdkujgkj",
+      "services": "dummy service"
+    },
+    {
+      "id": 5,
+      "name": "Dummy Name",
+      "email": "dummy@gmail.com",
+      "mobile": "6465432132486",
+      "address": "Dummy, bdkujgkj",
+      "services": "dummy service"
+    }
+  ],
+  "signup": [
+    {
+      "name": "shah",
+      "email": "shah123@gmail.com",
+      "mobile": "123456789",
+      "password": "123456879",
+      "id": 1
+    },
+    {
+      "name": "shah",
+      "email": "shah1@gmail.com",
+      "mobile": "464853122",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "name": "jayana",
+      "email": "jayana@gmail.com",
+      "mobile": "789461538",
+      "password": "jayana@123",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
